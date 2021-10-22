@@ -39,11 +39,11 @@
                             <td>{{$usuario->pais}}</td>
                             <td>{{$usuario->cod_postal}}</td>
                             <td>{{$usuario->direccion}}</td>
-                            <td><a href="{{ route('usuarios.edit', $usuario->id_usuario) }}">Editar</a></td>
-                            <td><form action="{{ route('usuarios.destroy', $usuario) }}" method="POST">
+                            <td><a class="btn btn-warning" href="{{ route('usuarios.edit', $usuario->id_usuario) }}">Editar</a></td>
+                            <td><form id="formulario-eliminar" action="{{ route('usuarios.destroy', $usuario) }}" method="POST">
                                     @csrf
                                     @method('delete')
-                                    <button type="submit">Eliminar</button>
+                                    <button type="submit" class="btn btn-danger">Eliminar</button>
                                 </form>
                             </td>
                         </tr>
@@ -57,4 +57,46 @@
     </div><!-- /.container-fluid -->
 </div>
 <!-- /.content -->
+@endsection
+
+<!-- SWEET ALERT 2 -->
+@section('js_sweet')
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+    @if (session('eliminar') == 'ok')
+        <script>
+            Swal.fire(
+                    '¡Eliminado!',
+                    'El registro se eliminó con éxito.',
+                    'success')
+        </script>
+    @endif
+
+    <script>
+
+        /* e => evento a capturar*/
+        $('#formulario-eliminar').submit(function(e){
+            e.preventDefault();
+
+            Swal.fire({
+            title: '¿Estás Seguro?',
+            text: "Este registro se eliminará definitivamente",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: '¡Si, eliminar!',
+            cancelButtonText: 'Cancelar'
+            }).then((result) => {
+            if (result.isConfirmed) {
+                Swal.fire(
+
+                this.submit()
+                
+                )
+            }
+            })
+        });
+    </script>
 @endsection
