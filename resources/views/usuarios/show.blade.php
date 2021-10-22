@@ -39,7 +39,11 @@
                             <td>{{$usuario->pais}}</td>
                             <td>{{$usuario->cod_postal}}</td>
                             <td>{{$usuario->direccion}}</td>
-                            <td><a class="btn btn-warning" href="{{ route('usuarios.edit', $usuario->id_usuario) }}">Editar</a></td>
+                            <td>
+                                <form id="formulario-actualizar" action="{{ route('usuarios.edit', $usuario->id_usuario) }}" method="GET">
+                                    <button type="submit" class="btn btn-warning">Editar</button>
+                                </form>
+                            </td>
                             <td><form id="formulario-eliminar" action="{{ route('usuarios.destroy', $usuario) }}" method="POST">
                                     @csrf
                                     @method('delete')
@@ -63,12 +67,12 @@
 @section('js_sweet')
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-
-    @if (session('eliminar') == 'ok')
+    <!-- sweet - Actualizar -->
+    @if (session('actualizar') == 'ok')
         <script>
             Swal.fire(
-                    '¡Eliminado!',
-                    'El registro se eliminó con éxito.',
+                    '¡Actualizado!',
+                    'El registro se actualizó con éxito.',
                     'success')
         </script>
     @endif
@@ -76,17 +80,17 @@
     <script>
 
         /* e => evento a capturar*/
-        $('#formulario-eliminar').submit(function(e){
+        $('#formulario-actualizar').submit(function(e){
             e.preventDefault();
 
             Swal.fire({
             title: '¿Estás Seguro?',
-            text: "Este registro se eliminará definitivamente",
+            text: "Este registro se actualizará",
             icon: 'warning',
             showCancelButton: true,
             confirmButtonColor: '#3085d6',
             cancelButtonColor: '#d33',
-            confirmButtonText: '¡Si, eliminar!',
+            confirmButtonText: '¡Si, actualizar!',
             cancelButtonText: 'Cancelar'
             }).then((result) => {
             if (result.isConfirmed) {
@@ -98,5 +102,42 @@
             }
             })
         });
+    </script>
+
+    <!-- sweet - Eliminar -->
+    @if (session('eliminar') == 'ok')
+    <script>
+        Swal.fire(
+                '¡Eliminado!',
+                'El registro se eliminó con éxito.',
+                'success')
+    </script>
+    @endif
+
+    <script>
+
+    /* e => evento a capturar*/
+    $('#formulario-eliminar').submit(function(e){
+        e.preventDefault();
+
+        Swal.fire({
+        title: '¿Estás Seguro?',
+        text: "Este registro se eliminará definitivamente",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: '¡Si, eliminar!',
+        cancelButtonText: 'Cancelar'
+        }).then((result) => {
+        if (result.isConfirmed) {
+            Swal.fire(
+
+            this.submit()
+            
+            )
+        }
+        })
+    });
     </script>
 @endsection

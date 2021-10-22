@@ -74,7 +74,7 @@ class UserController extends Controller
         $usuario->direccion = $request->direccion;
 
         $usuario->save();
-        return redirect()->route('usuarios.show', $usuario);
+        return redirect()->route('usuarios.show', $usuario)->with('actualizar', 'ok');                             
     }
 
     public function destroy(Usuario $usuario){
