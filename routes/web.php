@@ -6,6 +6,7 @@ use App\Http\Controllers\Auth\VerificationController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserController;
 use App\Models\User;
+use Symfony\Component\Routing\Route as RoutingRoute;
 
 /*
 |--------------------------------------------------------------------------
@@ -103,3 +104,6 @@ Route::get('/usuarios_edit_{usuario}', [UserController::class, 'edit'])->name('u
 
 /* Actualizar Usuario */
 Route::put('usuarios_{usuario}', [UserController::class, 'update'])->name('usuarios.update');
+
+/* Borrar Usuario */
+Route::delete('usuarios/{usuario}', [UserController::class, 'destroy'])->name('usuarios.destroy');

@@ -76,4 +76,10 @@ class UserController extends Controller
         $usuario->save();
         return redirect()->route('usuarios.show', $usuario);
     }
+
+    public function destroy(Usuario $usuario){
+        $usuario->delete();
+
+        return redirect()->route('usuarios.show');
+    }
 }

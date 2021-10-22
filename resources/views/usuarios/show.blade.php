@@ -40,7 +40,12 @@
                             <td>{{$usuario->cod_postal}}</td>
                             <td>{{$usuario->direccion}}</td>
                             <td><a href="{{ route('usuarios.edit', $usuario->id_usuario) }}">Editar</a></td>
-                            <td><a href="#">Eliminar</a></td>
+                            <td><form action="{{ route('usuarios.destroy', $usuario) }}" method="POST">
+                                    @csrf
+                                    @method('delete')
+                                    <button type="submit">Eliminar</button>
+                                </form>
+                            </td>
                         </tr>
                         @endforeach
                     </tbody>
