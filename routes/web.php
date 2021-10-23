@@ -6,6 +6,7 @@ use App\Http\Controllers\Auth\VerificationController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\ProviderController;
 use App\Models\User;
 use Symfony\Component\Routing\Route as RoutingRoute;
 
@@ -89,7 +90,8 @@ Route::get('/productos_create', [ProductController::class, 'create'])->name('pro
 Route::get('/productos_show', [ProductController::class, 'show'])->name('productos.show');
 
 /*  PROVEEDORES   */
-
+Route::get('/proveedores_create', [ProviderController::class, 'create'])->name('proveedores.create');
+Route::get('/proveedores_show', [ProviderController::class, 'show'])->name('proveedores.show');
 
 /*  CLIENTES     */
 
@@ -123,3 +125,17 @@ Route::put('productos_{producto}',[ProductController::class, 'update'])->name('p
 
 /* Borrar Productos */
 Route::delete('productos/{producto}', [ProductController::class, 'destroy'])->name('productos.destroy');
+
+
+/*               ********************** Proveedores **********************                  */
+/* Guarda Proveedores */
+Route::post('/proveedores_create', [ProviderController::class, 'store'])->name('proveedores.store');
+
+/* Editar Proveedores */
+Route::get('/proveedores_edit_{proveedor}', [ProviderController::class, 'edit'])->name('proveedores.edit');
+
+/* Actualizar Proveedores */
+Route::put('proveedores_{proveedor}', [ProviderController::class, 'update'])->name('proveedores.update');
+
+/* Borrar Proveedores */
+Route::delete('proveedores/{proveedor}', [ProviderController::class, 'destroy'])->name('proveedores.destroy');

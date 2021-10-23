@@ -258,13 +258,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link bg-dark">
+                                    <a href="/proveedores_create" class="nav-link bg-dark">
                                         <i class="material-icons nav-icon">add</i>
                                         <p>Agregar Proveedores</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link bg-dark">
+                                    <a href="/proveedores_show" class="nav-link bg-dark">
                                         <i class="material-icons nav-icon">visibility</i>
                                         <p>Mostrar Proveedores</p>
                                     </a>

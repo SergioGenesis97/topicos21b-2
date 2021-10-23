@@ -14,7 +14,15 @@ class CreateProviderTable extends Migration
     public function up()
     {
         Schema::create('provider', function (Blueprint $table) {
-            $table->id();
+            $table->id('id_proveedor');
+            $table->string('rfc');
+            $table->string('nombre');
+            $table->string('apell_pat');
+            $table->string('apell_mat');
+            $table->integer('codigo_postal');
+            $table->string('direccion');
+            $table->bigInteger('telefono');
+            $table->string('correo');
             $table->timestamps();
         });
     }
