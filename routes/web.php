@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\VerificationController;
+use App\Http\Controllers\ClientController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ProductController;
@@ -94,6 +95,9 @@ Route::get('/proveedores_create', [ProviderController::class, 'create'])->name('
 Route::get('/proveedores_show', [ProviderController::class, 'show'])->name('proveedores.show');
 
 /*  CLIENTES     */
+Route::get('/clientes_create', [ClientController::class, 'create'])->name('clientes.create');
+Route::get('/clientes_show', [ClientController::class, 'show'])->name('clientes.show');
+
 
 
 /*----------------------------------------------------------------------------------------------*/
@@ -139,3 +143,17 @@ Route::put('proveedores_{proveedor}', [ProviderController::class, 'update'])->na
 
 /* Borrar Proveedores */
 Route::delete('proveedores/{proveedor}', [ProviderController::class, 'destroy'])->name('proveedores.destroy');
+
+
+/*               ********************** Proveedores **********************                  */
+/* Guarda los clientes */
+Route::post('/clientes_create', [ClientController::class, 'store'])->name('clientes.store');
+
+/* Editar Clientes */
+Route::get('/clientes_edit_{cliente}', [ClientController::class, 'edit'])->name('clientes.edit');
+
+/* Actualizar Clientes */
+Route::put('clientes_{cliente}', [ClientController::class, 'update'])->name('clientes.update');
+
+/* Borrar Clientes */
+Route::delete('clientes/{cliente}', [ClientController::class, 'destroy'])->name('clientes.destroy');

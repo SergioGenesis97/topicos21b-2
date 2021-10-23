@@ -282,13 +282,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link bg-dark">
+                                    <a href="/clientes_create" class="nav-link bg-dark">
                                         <i class="material-icons nav-icon">group_add</i>
                                         <p>Agregar Clientes</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link bg-dark">
+                                    <a href="/clientes_show" class="nav-link bg-dark">
                                         <i class="material-icons nav-icon">visibility</i>
                                         <p>Mostrar Clientes</p>
                                     </a>
