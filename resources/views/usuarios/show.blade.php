@@ -40,11 +40,11 @@
                             <td>{{$usuario->cod_postal}}</td>
                             <td>{{$usuario->direccion}}</td>
                             <td>
-                                <form id="formulario-actualizar" action="{{ route('usuarios.edit', $usuario->id_usuario) }}" method="GET">
+                                <form class="formulario-actualizar" action="{{ route('usuarios.edit', $usuario->id_usuario) }}" method="GET">
                                     <button type="submit" class="btn btn-warning">Editar</button>
                                 </form>
                             </td>
-                            <td><form id="formulario-eliminar" action="{{ route('usuarios.destroy', $usuario) }}" method="POST">
+                            <td><form class="formulario-eliminar" action="{{ route('usuarios.destroy', $usuario) }}" method="POST">
                                     @csrf
                                     @method('delete')
                                     <button type="submit" class="btn btn-danger">Eliminar</button>
@@ -80,13 +80,13 @@
     <script>
 
         /* e => evento a capturar*/
-        $('#formulario-actualizar').submit(function(e){
+        $('.formulario-actualizar').submit(function(e){
             e.preventDefault();
 
             Swal.fire({
             title: '¿Estás Seguro?',
             text: "Este registro se actualizará",
-            icon: 'warning',
+            icon: 'info',
             showCancelButton: true,
             confirmButtonColor: '#3085d6',
             cancelButtonColor: '#d33',
@@ -117,7 +117,7 @@
     <script>
 
     /* e => evento a capturar*/
-    $('#formulario-eliminar').submit(function(e){
+    $('.formulario-eliminar').submit(function(e){
         e.preventDefault();
 
         Swal.fire({

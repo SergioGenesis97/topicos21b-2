@@ -34,11 +34,11 @@
                             <td>{{$producto->precio}}</td>
                             <td>{{$producto->stock}}</td>
                             <td>
-                                <form id="formulario-actualizar" action="{{ route('productos.edit', $producto->id_producto) }}" method="GET">
+                                <form class="formulario-actualizar" action="{{ route('productos.edit', $producto->id_producto) }}" method="GET">
                                     <button type="submit" class="btn btn-warning">Editar</button>
                                 </form>
                             </td>
-                            <td><form id="formulario-eliminar" action="{{ route('productos.destroy', $producto) }}" method="POST">
+                            <td><form class="formulario-eliminar" action="{{ route('productos.destroy', $producto) }}" method="POST">
                                     @csrf
                                     @method('delete')
                                     <button type="submit" class="btn btn-danger">Eliminar</button>
@@ -74,13 +74,13 @@
     <script>
 
         /* e => evento a capturar*/
-        $('#formulario-actualizar').submit(function(e){
+        $('.formulario-actualizar').submit(function(e){
             e.preventDefault();
 
             Swal.fire({
             title: '¿Estás Seguro?',
             text: "Este registro se actualizará",
-            icon: 'warning',
+            icon: 'info',
             showCancelButton: true,
             confirmButtonColor: '#3085d6',
             cancelButtonColor: '#d33',
@@ -98,6 +98,7 @@
         });
     </script>
 
+
     <!-- sweet - Eliminar -->
     @if (session('eliminar') == 'ok')
     <script>
@@ -111,7 +112,7 @@
     <script>
 
     /* e => evento a capturar*/
-    $('#formulario-eliminar').submit(function(e){
+    $('.formulario-eliminar').submit(function(e){
         e.preventDefault();
 
         Swal.fire({
