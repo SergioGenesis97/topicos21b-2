@@ -33,6 +33,7 @@
                         @foreach ($proveedores as $proveedor)
                         <tr>
                             <td>{{$proveedor->id_proveedor}}</td>
+                            <td>{{$proveedor->rfc}}</td>
                             <td>{{$proveedor->nombre}}</td>
                             <td>{{$proveedor->apell_pat}}</td>
                             <td>{{$proveedor->apell_mat}}</td>
