@@ -234,13 +234,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link bg-dark">
+                                    <a href="/productos_create" class="nav-link bg-dark">
                                         <i class="material-icons nav-icon">add</i>
                                         <p>Agregar Productos</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link bg-dark">
+                                    <a href="/productos_show" class="nav-link bg-dark">
                                         <i class="material-icons nav-icon">visibility</i>
                                         <p>Mostrar Productos</p>
                                     </a>

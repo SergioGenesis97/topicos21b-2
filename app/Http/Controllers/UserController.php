@@ -24,13 +24,13 @@ class UserController extends Controller
      * @return \Illuminate\Contracts\Support\Renderable
      */
 
-
+    /* Muestra el formulario */
     public function create()
     {
         return view('usuarios.crear_usuario');
     }
 
-
+    /* Guarda los datos */
     public function store(Request $request){
         $usuarios = new Usuario();
 
@@ -48,7 +48,7 @@ class UserController extends Controller
 
     }
 
-
+    /* Muestra los datos registrados */
     public function show()
     {   
 
@@ -57,12 +57,13 @@ class UserController extends Controller
         return view('usuarios.show', compact('usuarios'));
     }
 
-
+    /* Muestra los registros a editar */
     public function edit(Usuario $usuario){
 
         return view('usuarios.edit', compact('usuario'));
     }
 
+    /* Actualiza los registros */
     public function update(Request $request, Usuario $usuario){
         
         $usuario->nombre = $request->nombre;
@@ -77,6 +78,7 @@ class UserController extends Controller
         return redirect()->route('usuarios.show', $usuario)->with('actualizar', 'ok');                             
     }
 
+    /* Elimina los registros */
     public function destroy(Usuario $usuario){
         $usuario->delete();
 
