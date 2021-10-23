@@ -1,7 +1,7 @@
 @extends('layouts.index')
 
-@section('title_page', 'Agregar Producto')
-@section('title', 'Agregar Producto')
+@section('title_page', 'Editar Producto')
+@section('title', 'Editar Producto')
 
 @section('content')
 <!-- Main content -->

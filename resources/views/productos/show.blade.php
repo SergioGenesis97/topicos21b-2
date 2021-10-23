@@ -31,7 +31,7 @@
                             <td>{{$producto->id_producto}}</td>
                             <td>{{$producto->marca}}</td>
                             <td>{{$producto->tipo}}</td>
-                            <td>{{$producto->precio}}</td>
+                            <td>$ {{$producto->precio}}.00</td>
                             <td>{{$producto->stock}}</td>
                             <td>
                                 <form class="formulario-actualizar" action="{{ route('productos.edit', $producto->id_producto) }}" method="GET">
