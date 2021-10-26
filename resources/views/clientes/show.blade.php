@@ -94,11 +94,9 @@
             cancelButtonText: 'Cancelar'
             }).then((result) => {
             if (result.isConfirmed) {
-                Swal.fire(
 
                 this.submit()
                 
-                )
             }
             })
         });
@@ -131,13 +129,39 @@
         cancelButtonText: 'Cancelar'
         }).then((result) => {
         if (result.isConfirmed) {
-            Swal.fire(
 
             this.submit()
             
-            )
         }
         })
     });
     </script>
+
+    
+    <!-- sweet - **** CERRAR SESIÓN **** -->
+    <script>
+
+        /* e => evento a capturar*/
+        $('.formulario-logout').submit(function(e){
+            e.preventDefault();
+    
+            Swal.fire({
+            title: '¿Cerrar Sesión?',
+            text: "¡Está a punto de cerrar su sesión!",
+            icon: 'error',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: '¡Si, Cerrar Sesión!',
+            cancelButtonText: 'Cancelar'
+            }).then((result) => {
+            if (result.isConfirmed) {
+    
+                this.submit()
+                
+            }
+            })
+        });
+        </script>
+    
 @endsection
