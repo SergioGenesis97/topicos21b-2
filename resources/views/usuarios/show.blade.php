@@ -41,13 +41,13 @@
                             <td>{{$usuario->direccion}}</td>
                             <td>
                                 <form class="formulario-actualizar" action="{{ route('usuarios.edit', $usuario->id_usuario) }}" method="GET">
-                                    <button type="submit" class="btn btn-warning">Editar</button>
+                                    <button title="Editar" type="submit" class="material-icons btn btn-warning">mode</button>
                                 </form>
                             </td>
                             <td><form class="formulario-eliminar" action="{{ route('usuarios.destroy', $usuario) }}" method="POST">
                                     @csrf
                                     @method('delete')
-                                    <button type="submit" class="btn btn-danger">Eliminar</button>
+                                    <button title="Eliminar" type="submit" class="material-icons btn btn-danger">delete</button>
                                 </form>
                             </td>
                         </tr>
@@ -67,7 +67,7 @@
 @section('js_sweet')
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-    <!-- sweet - Actualizar -->
+    <!-- sweet - **** ACTUALIZAR *** -->
     @if (session('actualizar') == 'ok')
         <script>
             Swal.fire(
@@ -94,17 +94,14 @@
             cancelButtonText: 'Cancelar'
             }).then((result) => {
             if (result.isConfirmed) {
-                Swal.fire(
 
                 this.submit()
-                
-                )
             }
             })
         });
     </script>
 
-    <!-- sweet - Eliminar -->
+    <!-- sweet - **** ELIMINAR **** -->
     @if (session('eliminar') == 'ok')
     <script>
         Swal.fire(
@@ -131,11 +128,36 @@
         cancelButtonText: 'Cancelar'
         }).then((result) => {
         if (result.isConfirmed) {
-            Swal.fire(
+
+            this.submit()
+
+        }
+        })
+    });
+    </script>
+
+
+    <!-- sweet - **** CERRAR SESIÓN **** -->
+    <script>
+
+    /* e => evento a capturar*/
+    $('.formulario-logout').submit(function(e){
+        e.preventDefault();
+
+        Swal.fire({
+        title: '¿Cerrar Sesión?',
+        text: "¡Está a punto de cerrar su sesión!",
+        icon: 'error',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: '¡Si, Cerrar Sesión!',
+        cancelButtonText: 'Cancelar'
+        }).then((result) => {
+        if (result.isConfirmed) {
 
             this.submit()
             
-            )
         }
         })
     });

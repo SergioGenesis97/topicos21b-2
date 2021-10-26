@@ -35,13 +35,13 @@
                             <td>{{$producto->stock}}</td>
                             <td>
                                 <form class="formulario-actualizar" action="{{ route('productos.edit', $producto->id_producto) }}" method="GET">
-                                    <button type="submit" class="btn btn-warning">Editar</button>
+                                    <button title="Editar" type="submit" class="material-icons btn btn-warning">mode</button>
                                 </form>
                             </td>
                             <td><form class="formulario-eliminar" action="{{ route('productos.destroy', $producto) }}" method="POST">
                                     @csrf
                                     @method('delete')
-                                    <button type="submit" class="btn btn-danger">Eliminar</button>
+                                    <button title="Eliminar" type="submit" class="material-icons btn btn-danger">delete</button>
                                 </form>
                             </td>
                         </tr>

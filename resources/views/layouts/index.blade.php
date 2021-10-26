@@ -25,7 +25,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <div class="wrapper">
 
         <!-- Navbar -->
-        <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+        <nav class="main-header navbar navbar-expand navbar-black navbar-dark">
             <!-- Left navbar links -->
             <ul class="navbar-nav">
                 <li class="nav-item">
@@ -33,9 +33,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 </li>
                 <li class="nav-item d-none d-sm-inline-block">
                     <a href="/home" class="nav-link">Home</a>
-                </li>
-                <li class="nav-item d-none d-sm-inline-block">
-                    <a href="#" class="nav-link">Contact</a>
                 </li>
             </ul>
 
@@ -314,8 +311,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         </div><!-- /.col -->
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
-                                <li class="breadcrumb-item"><a href="#">Home</a></li>
-                                <li class="breadcrumb-item"><a href="{{ url('/logout') }}"> logout </a></li>
+                                <li class="breadcrumb-item">
+                                    <form class="formulario-logout" action="{{ url('/logout') }}">
+                                        <button title="Cerrar Sesión" type="submit" class="material-icons btn btn-danger">logout</button>
+                                    </form>
+                                </li>
                             </ol>
                         </div><!-- /.col -->
                     </div><!-- /.row -->

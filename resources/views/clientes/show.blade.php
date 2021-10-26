@@ -41,13 +41,13 @@
                             <td>{{$cliente->correo}}</td>
                             <td>
                                 <form class="formulario-actualizar" action="{{ route('clientes.edit', $cliente->id_cliente) }}" method="GET">
-                                    <button type="submit" class="btn btn-warning">Editar</button>
+                                    <button title="Editar" type="submit" class="material-icons btn btn-warning">mode</button>
                                 </form>
                             </td>
                             <td><form class="formulario-eliminar" action="{{ route('clientes.destroy', $cliente) }}" method="POST">
                                     @csrf
                                     @method('delete')
-                                    <button type="submit" class="btn btn-danger">Eliminar</button>
+                                    <button title="Eliminar" type="submit" class="material-icons btn btn-danger">delete</button>
                                 </form>
                             </td>
                         </tr>
