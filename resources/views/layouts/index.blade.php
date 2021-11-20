@@ -294,7 +294,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 Todo lo que buscas
             </div>
             <!-- Default to the left -->
-            Copyright &copy; 2021-2032 <a href="#" class="text-danger">SR</a>. Todos los derechos reservados.
+            Copyright &copy; 2021-2032 <a title="Sergio V. Rosas Bautista" href="#" class="text-danger">SR</a>. Todos los derechos reservados.
         </footer>
     </div>
     <!-- ./wrapper -->
