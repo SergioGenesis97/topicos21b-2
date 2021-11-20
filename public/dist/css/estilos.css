@@ -1,0 +1,17 @@
+#sidebar-img{
+
+    /* Numeros de las imagenes disponibles 2, 3, 4, 5, 6, 7*/
+
+    background-image: url(../img/3.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#text-blue{
+    color: rgb(0, 210, 255);
+}
+
+#text-dark{
+    color: rgb(0, 0, 0);
+}
