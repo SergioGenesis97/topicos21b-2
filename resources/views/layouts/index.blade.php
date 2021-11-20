@@ -225,7 +225,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="/saber" class="nav-link" id="text-white">
+                                    <a href="/more_saber" class="nav-link" id="text-white">
                                         <div id="link-item">
                                             <i class="material-icons nav-icon">read_more</i>
                                             <p>Saber más</p>
@@ -233,7 +233,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="/desarrollador" class="nav-link" id="text-white">
+                                    <a href="/more_desarrollador" class="nav-link" id="text-white">
                                         <div id="link-item">
                                             <i class="material-icons nav-icon">computer</i>
                                             <p>Desarrollador</p>

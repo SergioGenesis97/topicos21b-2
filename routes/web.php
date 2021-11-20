@@ -98,7 +98,9 @@ Route::get('/proveedores_show', [ProviderController::class, 'show'])->name('prov
 Route::get('/clientes_create', [ClientController::class, 'create'])->name('clientes.create');
 Route::get('/clientes_show', [ClientController::class, 'show'])->name('clientes.show');
 
-
+/*  MORE    */
+Route::get('/more_saber', [HomeController::class, 'saber'])->name('more.saber');
+Route::get('more_desarrollador', [HomeController::class, 'desarrollador'])->name('more.desarrollador');
 
 /*----------------------------------------------------------------------------------------------*/
 /*                                          METODOS                                     */

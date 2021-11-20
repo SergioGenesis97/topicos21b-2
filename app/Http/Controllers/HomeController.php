@@ -30,4 +30,12 @@ class HomeController extends Controller
     {
         return view('welcome');
     }
+
+    public function saber(){
+        return view('more.saber');
+    }
+
+    public function desarrollador(){
+        return view('more.desarrollador');
+    }
 }
