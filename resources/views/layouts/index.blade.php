@@ -91,7 +91,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         <input class="form-control form-control-sidebar" type="search" placeholder="Buscar..." aria-label="Search" >
                         <div class="input-group-append">
                             <button class="btn btn-sidebar">
-                                <i class="fas fa-search fa-fw  text-warning"></i>
+                                <i class="fas fa-search fa-fw"></i>
                             </button>
                         </div>
                     </div>
@@ -104,7 +104,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             with font-awesome or any other icon font library -->
                         <!--   USUARIOS    -->
                         <li class="nav-item">
-                            <a href="#" class="nav-link active bg-warning">
+                            <a href="#" class="nav-link" id="nav-border">
                                 <i class="nav-icon material-icons">people_alt</i>
                                 <p>
                                     Usuarios
@@ -113,22 +113,26 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="/usuarios_create" class="nav-link">
-                                        <i class="material-icons nav-icon">person_add</i>
-                                        <p>Agregar Usuarios</p>
+                                    <a href="/usuarios_create" class="nav-link" id="text-white">
+                                        <div id="link-item">
+                                            <i class="material-icons nav-icon">person_add</i>
+                                            <p>Agregar Usuarios</p>
+                                        </div>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="/usuarios_show" class="nav-link">
-                                        <i class="material-icons nav-icon">face</i>
-                                        <p>Mostrar Usuarios</p>
+                                    <a href="/usuarios_show" class="nav-link" id="text-white">
+                                        <div id="link-item">
+                                            <i class="material-icons nav-icon">face</i>
+                                            <p>Mostrar Usuarios</p>
+                                        </div>
                                     </a>
                                 </li>
                             </ul>
                         </li> <!--   ./USUARIOS    -->                        
                         <!--   PRODUCTOS    -->
                         <li class="nav-item">
-                            <a href="#" class="nav-link active  bg-warning">
+                            <a href="#" class="nav-link" id="nav-border">
                                 <i class="nav-icon material-icons">inventory_2</i>
                                 <p>
                                     Productos
@@ -137,22 +141,26 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="/productos_create" class="nav-link">
-                                        <i class="material-icons nav-icon">add</i>
-                                        <p>Agregar Productos</p>
+                                    <a href="/productos_create" class="nav-link" id="text-white">
+                                        <div id="link-item">
+                                            <i class="material-icons nav-icon">add</i>
+                                            <p>Agregar Productos</p>
+                                        </div>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="/productos_show" class="nav-link">
-                                        <i class="material-icons nav-icon">visibility</i>
-                                        <p>Mostrar Productos</p>
+                                    <a href="/productos_show" class="nav-link" id="text-white">
+                                        <div id="link-item">
+                                            <i class="material-icons nav-icon">visibility</i>
+                                            <p>Mostrar Productos</p>
+                                        </div>
                                     </a>
                                 </li>
                             </ul>
                         </li> <!--   ./PRODUCTOS    -->
                         <!--   PROVEEDORES    -->
                         <li class="nav-item">
-                            <a href="#" class="nav-link active bg-warning">
+                            <a href="#" class="nav-link" id="nav-border">
                                 <i class="nav-icon material-icons">store</i>
                                 <p>
                                     Proveedores
@@ -161,22 +169,26 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="/proveedores_create" class="nav-link">
-                                        <i class="material-icons nav-icon">add</i>
-                                        <p>Agregar Proveedores</p>
+                                    <a href="/proveedores_create" class="nav-link" id="text-white">
+                                        <div id="link-item">
+                                            <i class="material-icons nav-icon">add</i>
+                                            <p>Agregar Proveedores</p>
+                                        </div>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="/proveedores_show" class="nav-link">
-                                        <i class="material-icons nav-icon">visibility</i>
-                                        <p>Mostrar Proveedores</p>
+                                    <a href="/proveedores_show" class="nav-link" id="text-white">
+                                        <div id="link-item">
+                                            <i class="material-icons nav-icon">visibility</i>
+                                            <p>Mostrar Proveedores</p>
+                                        </div>
                                     </a>
                                 </li>
                             </ul>
                         </li> <!--   ./PROVEEDORES    -->
                         <!--   CLIENTES    -->
                         <li class="nav-item">
-                            <a href="#" class="nav-link active bg-warning">
+                            <a href="#" class="nav-link" id="nav-border">
                                 <i class="nav-icon material-icons">groups</i>
                                 <p>
                                     Clientes
@@ -185,19 +197,51 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="/clientes_create" class="nav-link">
-                                        <i class="material-icons nav-icon">group_add</i>
-                                        <p>Agregar Clientes</p>
+                                    <a href="/clientes_create" class="nav-link" id="text-white">
+                                        <div id="link-item">
+                                            <i class="material-icons nav-icon">group_add</i>
+                                            <p>Agregar Clientes</p>
+                                        </div>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="/clientes_show" class="nav-link">
-                                        <i class="material-icons nav-icon">visibility</i>
-                                        <p>Mostrar Clientes</p>
+                                    <a href="/clientes_show" class="nav-link" id="text-white">
+                                        <div id="link-item">
+                                            <i class="material-icons nav-icon">visibility</i>
+                                            <p>Mostrar Clientes</p>
+                                        </div>
                                     </a>
                                 </li>
                             </ul>
                         </li> <!--   ./CLIENTES    -->
+                        <!--   MORE    -->
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" id="nav-border">
+                                <i class="nav-icon material-icons">more</i>
+                                <p>
+                                    Más
+                                    <i class="right fas fa-angle-left"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="/saber" class="nav-link" id="text-white">
+                                        <div id="link-item">
+                                            <i class="material-icons nav-icon">read_more</i>
+                                            <p>Saber más</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/desarrollador" class="nav-link" id="text-white">
+                                        <div id="link-item">
+                                            <i class="material-icons nav-icon">computer</i>
+                                            <p>Desarrollador</p>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li> <!--   ./MORE    -->
                         
                     </ul>
                 </nav>

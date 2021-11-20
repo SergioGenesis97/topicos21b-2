@@ -15,3 +15,27 @@
 #text-dark{
     color: rgb(0, 0, 0);
 }
+
+#text-white{
+    color: white;
+}
+
+/*  Nav link    */
+#nav-border{
+    color: darkorange;
+    background-color: rgba(0, 0, 0, 0.680);
+}
+
+#nav-border:hover{
+    background-color: darkorange;
+    color: rgb(33, 33, 33);
+}
+
+/*  link item   */
+#link-item{
+    margin-left: 20px;
+}
+
+#link-item:hover{
+    color: rgb(0, 130, 216);
+}
