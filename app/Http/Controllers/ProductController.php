@@ -42,7 +42,7 @@ class ProductController extends Controller
 
         return redirect()->route('productos.show', $producto);
         
-    }
+    } 
 
 
     /* Muestra los datos registrados */

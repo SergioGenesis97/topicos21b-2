@@ -44,7 +44,8 @@
                                     <button title="Editar" type="submit" class="material-icons btn btn-warning">mode</button>
                                 </form>
                             </td>
-                            <td><form class="formulario-eliminar" action="{{ route('usuarios.destroy', $usuario) }}" method="POST">
+                            <td>
+                                <form class="formulario-eliminar" action="{{ route('usuarios.destroy', $usuario) }}" method="POST">
                                     @csrf
                                     @method('delete')
                                     <button title="Eliminar" type="submit" class="material-icons btn btn-danger">delete</button>
